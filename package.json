@@ -1,0 +1,24 @@
+{
+  "name": "tomday2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier \"src/**/*.{js,html}\" --write --no-semi --single-quote"
+  },
+  
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VanSlam/tomDay2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VanSlam/tomDay2/issues"
+  },
+  "homepage": "https://github.com/VanSlam/tomDay2#readme",
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  }
+}
