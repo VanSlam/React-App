@@ -6,12 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>adopt me</title>
     <link rel="stylesheet" href="./style.css" />
-    
+
 </head>
 <body>
-    <h1>Not  Rendered</h1>
+    <div id="root">Not Rendered</div>
     <script src="https://unpkg.com/react@16.8.4/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react@16.8.4/umd/react.development.js"></script>
-
+    <script src="https://unpkg.com/react-dom@16.8.4/umd/react-dom.development.js"></script>
+    <script>
+    const App = () =>{
+        return React.createElement(
+            "div", {},
+            React.createElement("h1", {}, "Adopt me!")
+        )
+    }
+    ReactDOM.render(React.createElement(App), document.getElementById("root"))
+    </script>
 </body>
 </html>
