@@ -25748,7 +25748,34 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"src/Pet.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"src/SearchParam.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var SearchParams = function SearchParams() {
+  var location = 'Seattle, WA';
+  return _react.default.createElement("div", {
+    className: "search-params"
+  }, _react.default.createElement("form", null, _react.default.createElement("label", {
+    htmlFor: "location"
+  }, "location", _react.default.createElement("input", {
+    id: "location",
+    value: location,
+    placeholder: "Location"
+  }))));
+};
+
+var _default = SearchParams;
+exports.default = _default;
+},{"react":"node_modules/react/index.js"}],"src/Pet.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -25778,6 +25805,8 @@ exports.default = _default;
 var _react = _interopRequireDefault(require("react"));
 
 var _reactDom = require("react-dom");
+
+var _SearchParam = _interopRequireDefault(require("./SearchParam.js"));
 
 var _Pet = _interopRequireDefault(require("./Pet"));
 
@@ -25821,11 +25850,11 @@ var App = function App() {
     breed: "Bullfrog"
   }), _react.default.createElement(_Pet.default, {
     name: "Roberto"
-  }));
+  }), _react.default.createElement(_SearchParam.default, null));
 };
 
 (0, _reactDom.render)(_react.default.createElement(App), document.getElementById('root'));
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./Pet":"src/Pet.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./SearchParam.js":"src/SearchParam.js","./Pet":"src/Pet.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -25853,7 +25882,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62779" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62853" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

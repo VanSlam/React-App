@@ -1,6 +1,7 @@
 //Zach Van Slambrook
 import React from 'react'
 import { render } from 'react-dom'
+import SearchParams from './SearchParam.js'
 
 /*const Pet = ({ name, animal, breed }) => {
   return React.createElement('div', {}, [
@@ -33,6 +34,7 @@ const App = () => {
       <Pet name="Scout" animal="Dog" breed="Ausy" />
       <Pet name="Jeremiah" animal="Frog" breed="Bullfrog" />
       <Pet name="Roberto" />
+      <SearchParams />
     </div>
   )
 }
