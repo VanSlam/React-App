@@ -31,6 +31,8 @@ const App = () => {
       <h1>Adopt me!</h1>
       <Pet name="Tucker" animal="Dog" breed="Mut" />
       <Pet name="Scout" animal="Dog" breed="Ausy" />
+      <Pet name="Jeremiah" animal="Frog" breed="Bullfrog" />
+      <Pet name="Roberto" />
     </div>
   )
 }

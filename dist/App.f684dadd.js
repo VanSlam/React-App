@@ -25760,14 +25760,17 @@ var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var pet = function pet(_ref) {
+//default values to not crash app
+var Pet = function Pet(_ref) {
   var name = _ref.name,
-      animal = _ref.animal,
-      breed = _ref.breed;
+      _ref$animal = _ref.animal,
+      animal = _ref$animal === void 0 ? 'NA' : _ref$animal,
+      _ref$breed = _ref.breed,
+      breed = _ref$breed === void 0 ? 'NA' : _ref$breed;
   return _react.default.createElement('div', {}, [_react.default.createElement('h1', {}, name), _react.default.createElement('h2', {}, animal), _react.default.createElement('h2', {}, breed)]);
 };
 
-var _default = pet;
+var _default = Pet;
 exports.default = _default;
 },{"react":"node_modules/react/index.js"}],"src/App.js":[function(require,module,exports) {
 "use strict";
@@ -25812,6 +25815,12 @@ var App = function App() {
     name: "Scout",
     animal: "Dog",
     breed: "Ausy"
+  }), _react.default.createElement(_Pet.default, {
+    name: "Jeremiah",
+    animal: "Frog",
+    breed: "Bullfrog"
+  }), _react.default.createElement(_Pet.default, {
+    name: "Roberto"
   }));
 };
 
@@ -25844,7 +25853,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62761" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62779" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

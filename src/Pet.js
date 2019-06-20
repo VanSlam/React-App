@@ -1,6 +1,7 @@
 import React from 'react'
 
-const pet = ({ name, animal, breed }) => {
+//default values to not crash app
+const Pet = ({ name, animal = 'NA', breed = 'NA' }) => {
   return React.createElement('div', {}, [
     React.createElement('h1', {}, name),
     React.createElement('h2', {}, animal),
@@ -8,4 +9,4 @@ const pet = ({ name, animal, breed }) => {
   ])
 }
 
-export default pet
+export default Pet
