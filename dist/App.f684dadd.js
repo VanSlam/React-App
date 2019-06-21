@@ -27664,19 +27664,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   ])
 }*/
 const App = () => {
-  return _react.default.createElement("div", null, _react.default.createElement("h1", null, "Adopt me!"), _react.default.createElement(_Pet.default, {
-    name: "Tucker",
-    animal: "Dog",
-    breed: "Mut"
-  }), _react.default.createElement(_Pet.default, {
-    name: "Scout",
-    animal: "Dog",
-    breed: "Ausy"
-  }), _react.default.createElement(_Pet.default, {
-    name: "Jeremiah",
-    animal: "Frog",
-    breed: "Bullfrog"
-  }), _react.default.createElement(_SearchParam.default, null));
+  return _react.default.createElement("div", null, _react.default.createElement("h1", null, "Adopt me!"), _react.default.createElement(_SearchParam.default, null));
 };
 
 (0, _reactDom.render)(_react.default.createElement(App), document.getElementById('root'));
@@ -27708,7 +27696,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52138" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56375" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
