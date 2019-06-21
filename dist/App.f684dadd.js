@@ -27480,14 +27480,35 @@ var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-//default values to not crash app
+// const Pet = ({ name, animal, breed }) => {
+//   return React.createElement('div', {}, [
+//     React.createElement('h1', {}, name),
+//     React.createElement('h2', {}, animal),
+//     React.createElement('h2', {}, breed)
+//   ])
+// }
 const Pet = (_ref) => {
   let name = _ref.name,
       _ref$animal = _ref.animal,
       animal = _ref$animal === void 0 ? 'None provided' : _ref$animal,
       _ref$breed = _ref.breed,
-      breed = _ref$breed === void 0 ? 'None provided' : _ref$breed;
-  return _react.default.createElement("div", null, _react.default.createElement("h1", null, "Name: ", name), _react.default.createElement("h2", null, "Animal: ", animal), _react.default.createElement("h3", null, "Breed: ", breed));
+      breed = _ref$breed === void 0 ? 'None provided' : _ref$breed,
+      media = _ref.media,
+      location = _ref.location,
+      id = _ref.id,
+      key = _ref.key;
+  const hero = media.length ? media[0].small : 'http://placecorgi.com/300/300';
+  return _react.default.createElement("a", {
+    href: `/details/${id}`,
+    className: "pet"
+  }, _react.default.createElement("div", {
+    className: "image-container"
+  }, _react.default.createElement("img", {
+    src: hero,
+    alt: name
+  })), _react.default.createElement("div", {
+    className: "info"
+  }, _react.default.createElement("h1", null, name), _react.default.createElement("h2", null, `${animal} - ${breed} - ${location}`)));
 };
 
 var _default = Pet;
@@ -27696,7 +27717,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56375" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56540" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
